@@ -1,0 +1,13 @@
+{
+    "target": "./withMetadata.yml",
+    "configurations": {
+        "DEV": {
+            "path": "Revelio/OpenAPI Integration 2/DEV/0.1.0",
+            "url": "http://dev.metadata.getrevelio.com"
+        },
+        "QA": {
+            "path": "Revelio/OpenAPI Integration 2/QA/0.1.0",
+            "url": "http://qa.metadata.getrevelio.com"
+        }
+    }
+}

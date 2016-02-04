@@ -1,0 +1,65 @@
+swagger: "2.0"
+info:
+  description: |
+    API with metadata
+  version: "1.0.0"
+  title: API with Metadata
+  contact:
+    name: support@getrevelio.com
+host: fakeapi.getrevelio.com
+basePath: /api
+schemes:
+  - http
+paths:
+  /person:
+    post:
+      summary: Creates a new person
+      operationId: createPerson
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: false
+          schema:
+            $ref: "#/definitions/Person"
+      responses:
+        "405":
+          description: Invalid input
+      x-supported-auth:
+        - apiKey
+        - JSON Web Token
+  /person/{personId}:
+    get:
+      summary: Gets a person
+      operationId: getPerson
+      parameters:
+        - in: path
+          name: personId
+          required: true
+          type: integer
+      responses:
+        "200":
+          description: User information
+          schema:
+            $ref: "#/definitions/Person"
+        "404":
+          description: User does not exist
+      x-notes: Contact accounting team for more info  
+definitions:
+  Person:
+    required:
+      - firstName
+      - lastName
+    properties:
+      firstName:
+        type: string
+        example: John
+      lastName:
+        type: string
+        x-examples:
+          - Picard
+          - Dillinger
+          - Doe

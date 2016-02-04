@@ -1,0 +1,49 @@
+{
+  "name": "revelio-openapi",
+  "version": "0.3.0",
+  "description": "Revelio publishing tool for Open API specification",
+  "bin": "cli.js",
+  "main": "./lib/app.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revelio/revelio-openapi.git"
+  },
+  "keywords": [
+    "revelio",
+    "api",
+    "openapi",
+    "swagger",
+    "documentation",
+    "rest",
+    "endpoint",
+    "doc",
+    "reference",
+    "manual",
+    "restful",
+    "generator"
+  ],
+  "author": "Revelio <support@getrevelio.com> (https://www.getrevelio.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/revelio/revelio-openapi/issues"
+  },
+  "homepage": "https://github.com/revelio/revelio-openapi#readme",
+  "dependencies": {
+    "async": "^1.5.2",
+    "bluebird": "^3.2.1",
+    "commander": "^2.9.0",
+    "pluralize": "^1.2.1",
+    "revelio-publisher": "^0.3.2",
+    "swagger-parser": "^3.4.0",
+    "underscore": "^1.8.3",
+    "yaml": "^0.2.3"
+  },
+  "devDependencies": {
+    "assertchain-jasmine": "^0.1.0",
+    "jasmine": "^2.4.1",
+    "proxyquire": "^1.7.4"
+  }
+}
